@@ -1,0 +1,176 @@
+@import url('https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100..900;1,100..900&display=swap');
+body{
+  margin: 0;
+  background: rgb(12, 18, 44);
+  position: relative;
+  font-family: "Raleway", sans-serif;
+  box-sizing: border-box;
+}
+p{
+  margin: 0;
+}
+.bg{
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  z-index: -1;
+}
+.container{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  gap: 2rem;
+}
+.logo{
+ width: 150px;
+}
+.left-card{
+  background: hsl(228, 56%, 26%);
+  padding: 35px;
+  padding-right: 50px;
+  border-radius: 10px 100px 10px 10px;
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+  margin-top: -100px;
+  width: 20vw;
+}
+
+.left-images{
+  display: flex;
+  gap: 1.2rem;
+}
+.left-images img {
+  padding: 12px;
+  background: rgb(12, 18, 44);
+  border-radius: 10px;
+  object-fit: contain;
+  object-position: center;
+}
+
+.right-card{
+  background: hsl(228, 56%, 26%);
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  padding: 25px;
+  position: relative;
+  margin-top: -45px;
+  font-size: 1rem;
+  border-radius: 10px;
+  width: 40vw;
+}
+
+.right-card p{
+  color: hsl(229, 7%, 55%);
+  font-weight: 400;
+}
+.right-card .value{
+  color: hsl(243, 100%, 93%);
+  font-size: 14px;
+  font-weight: 700;
+}
+.progress-bar{
+  width: 100%;
+  height: 18px;
+  background: hsl(229, 57%, 15%);
+  border-radius: 20px;
+  padding: 3px;
+}
+.progress{
+  width: 81.5%;
+  height: 100%;
+  background: linear-gradient(to right, hsl(6, 100%, 80%), hsl(335, 100%, 65%));
+  border-radius: 20px;
+  position: relative;
+}
+.progress::after{
+  content: "";
+  position: absolute;
+  right: 2px;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 12px;
+  height: 12px;
+  background: white;
+  border-radius: 50%;
+}
+.range{
+  display: flex;
+  justify-content: space-between;
+  font-weight: 600;
+}
+.bubble{
+ position: absolute;
+ padding: 12px 20px;
+ background: white;
+ right: 30px;
+ top: -35px;
+ border-radius: 10px 10px 0px 10px;
+ display: flex;
+ align-items: center;
+ gap: 8px;
+}
+.bubble::after{
+  content: '';
+  position: absolute;
+  right: 0;
+  bottom: -13px;
+  width: 0;
+  height: 0;
+  border-left: 15px solid transparent;
+  border-top: 15px solid white;
+}
+.big{
+  font-size: 2rem;
+  font-weight: 700;
+  color: hsl(228, 56%, 26%);
+}
+.small{
+ color: gray;
+ letter-spacing: 1px;
+ font-weight: 400;
+ 
+}
+
+@media(max-width: 768px){
+ .bg{
+    content: url("images/bg-mobile.png");
+    height: 100%;
+    object-fit: cover;
+ }
+ .container{
+ flex-direction: column;
+}
+.left-card{
+  margin-top: 0px;
+  width: 60vw;
+ padding-right: 35px;
+}
+.right-card{
+  margin-top: 0px;
+  padding: 35px;
+  width: 60vw;
+  text-align: center;
+  padding-bottom: 45px;
+}
+.bubble{
+  top: auto;
+  right: auto;
+  bottom: -30px;
+  left: 50%;
+  transform: translateX(-50%);
+  border-radius: 10px;
+}
+.bubble::after{
+  display: none;
+}
+.big{
+  font-size: 1.5rem;
+}
+.small{
+  font-size: 14px;
+}
+
+}
